@@ -1,0 +1,12 @@
+{
+  "version": "1.01",
+  "utc_cal_by_multi_track": {
+    "min_dist_delta": 5,
+    "max_dist_delta": 50,
+    "distance_step": 3,
+    "min_files_num": 1,
+    "max_files_num": 10,
+    "time_delta": 60,
+    "num_time_delta_spread": 2
+  }
+}

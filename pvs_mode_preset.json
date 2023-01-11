@@ -1,0 +1,97 @@
+{
+  "no_get": {
+    "version": "1.01",
+    "get": [
+      "-get_coord_by_gpx_file",
+      "-get_utc_calibrate_by_track",
+      "-get_file_data_from_manual_file",
+      "-get_common_data_from_manual_file",
+      "-get_file_data_by_file_tags",
+      "-get_t_zone_by_neighbors",
+      "-get_coord_by_neighbors",
+      "-get_begin_coord_by_first_neighbor",
+      "-get_end_coord_by_last_neighbor",
+      "-get_median_coord",
+      "-get_coord_by_geo_object",
+      "-get_address",
+      "-get_unique_id"
+    ]
+  },
+
+  "exact_get": {
+    "version": "1.01",
+    "get": [
+      "get_coord_by_gpx_file",
+      "get_utc_calibrate_by_track",
+      "get_file_data_from_manual_file",
+      "-get_common_data_from_manual_file",
+      "get_file_data_by_file_tags",
+      "get_t_zone_by_neighbors",
+      "-get_coord_by_neighbors",
+      "-get_begin_coord_by_first_neighbor",
+      "-get_end_coord_by_last_neighbor",
+      "-get_median_coord",
+      "get_coord_by_geo_object",
+      "get_address",
+      "-get_unique_id"
+    ]
+  },
+
+  "only_rename": {
+    "version": "1.01",
+    "set": [
+      "-exif_set",
+      "-mac_tags_set",
+      "-addr_if_obj_to_mac_tag",
+      "rename_set"
+    ]
+  },
+
+  "no_mac_tag": {
+    "version": "1.01",
+    "mactag_order": []
+  },
+  "d_tag": {
+    "version": "1.01",
+    "mactag_no_utc_datetime": {
+      "active": true,
+      "prefix": "# no_utc_dt",
+      "color": "RED"
+    },
+    "mactag_utc_datetime": {
+      "active": true,
+      "prefix": "utc: ",
+      "color": "NONE"
+    },
+    "mactag_no_t_zone": {
+      "active": true,
+      "prefix": "# no_t_zone",
+      "color": "RED"
+    },
+    "mactag_first_datetime": {
+      "active": true,
+      "prefix": "f: ",
+      "color": "NONE"
+    },
+    "mactag_creation_datetime": {
+      "active": true,
+      "prefix": "cr: ",
+      "color": "NONE"
+    },
+    "mactag_naming_datetime": {
+      "active": true,
+      "prefix": "n: ",
+      "color": "NONE"
+    },
+    "mactag_naming_datetime_warning": {
+      "active": true,
+      "prefix": "",
+      "color": "ORANGE"
+    },
+    "mactag_sort_key": {
+      "active": true,
+      "prefix": "sk:",
+      "color": "NONE"
+    }
+  }
+}

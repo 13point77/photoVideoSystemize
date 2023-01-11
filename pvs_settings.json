@@ -1,0 +1,577 @@
+{
+  "version": "1.01",
+  "new_job_reset": true,
+  "recurrent": true,
+  "num_multi_processes": 5,
+  "script_data_tag_name": "XMP:UserComment",
+  "folder_dt_name_format": "%Y_%m",
+  "sort_files": false,
+  "name_core_format": "-%Y_%m_%d-%H_%M_%S",
+  "new_name_order": [
+    "num",
+    "prefix",
+    "name_core",
+    "suffix"
+  ],
+  "t_zone_naming": "local",
+  "new_name_case": "upper",
+  "path_names_phrase_pattern": "\\((.*?)\\)",
+  "log_file_path": "",
+  "max_log_size_mb": 100,
+  "gogle_geo_object_kml_file_path": "",
+  "done_folders_txt_file_path": "",
+  "done_folders_pickle_file_path": "",
+  "files_data_pickle_file_path": "",
+  "addr_cache_pickle_file_path": "",
+  "all_types_folder_path": "",
+  "exist_pv_gpx_track_file": "_exist_pv_track.gpx",
+  "create_exist_track": false,
+  "split_exist_track_by_cameras": false,
+  "folder_settings_file": "",
+  "manual_data_file": "_manual_data.txt",
+  "split_sign": "|",
+  "manual_date_time_format": "",
+  "save_all_by_hand_file_data": true,
+  "osm_user_agent": "user_agent",
+  "ignore_sing": "_",
+  "media_types": [
+    "NEF",
+    "DNG",
+    "JPG",
+    "JPEG",
+    "MP4",
+    "AVI",
+    "MPG",
+    "PNG",
+    "TIF",
+    "TIFF",
+    "MOV",
+    "M4V",
+    "3GP",
+    "PSD",
+    "CR2",
+    "BMP",
+    "HEIC"
+  ],
+  "add_types": [
+    "XMP"
+    ],
+  "masters": {
+    "(.*).NEF$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).CR2$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).DNG$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).MOV$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).TIF$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).TIFF$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ".TIF"
+    }
+  },
+  "slaves": {
+    "(.*).jpg$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    },
+    "(.*).jpeg$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ".jpg"
+    },
+    "(.*).psd$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    }
+  },
+  "additions": {
+    "(.*).xmp$": {
+      "prefix": "",
+      "suffix": "",
+      "ext": ""
+    }
+  },
+  "non_pair": {
+    "prefix": "",
+    "suffix": ""
+  },
+  "group_pattern_case_sensitive": false,
+  "job_sing": "-_t_-",
+  "EXIF_create_dt_tag_name": [
+    "EXIF:DateTimeOriginal",
+    "QuickTime:CreateDate",
+    "APP12:DateTimeOriginal",
+    "XMP:DateCreated",
+    "RIFF:DateTimeOriginal",
+    "MakerNotes:DateTimeOriginal",
+    "-EXIF:CreateDate"
+  ],
+  "get": [
+    "get_coord_by_gpx_file",
+    "get_utc_calibrate_by_track",
+    "get_file_data_from_manual_file",
+    "get_common_data_from_manual_file",
+    "get_file_data_by_file_tags",
+    "get_t_zone_by_neighbors",
+    "-get_coord_by_neighbors",
+    "-get_begin_coord_by_first_neighbor",
+    "-get_end_coord_by_last_neighbor",
+    "-get_median_coord",
+    "get_coord_by_geo_object",
+    "get_address",
+    "-get_unique_id"
+  ],
+  "address_source_ordered": [
+    "cache",
+    "osm"
+  ],
+  "use_geo_point": true,
+  "address_cache_delta": 50,
+  "log_mode": [
+    "counter_print",
+    "rename_log",
+    "-rename_print",
+    "address_log",
+    "-address_print",
+    "coord_log",
+    "-coord_print",
+    "t_zone_log",
+    "-t_zone_print",
+    "datetime_log",
+    "-datetime_print",
+    "calibr_log",
+    "calibr_print",
+    "cal_w_p_log",
+    "cal_w_p_print",
+    "upd_addr_cache_log",
+    "upd_addr_cache_print",
+    "stage_log",
+    "stage_print",
+    "main_log",
+    "main_print",
+    "result_log",
+    "result_print",
+    "tool_log",
+    "tool_print"
+  ],
+  "set": [
+    "exif_set",
+    "mac_tags_set",
+    "-addr_if_obj_to_mac_tag",
+    "rename_set"
+  ],
+  "addr_parts_types": [
+    "geo_point",
+    "city",
+    "state",
+    "borough",
+    "village",
+    "hamlet",
+    "suburb",
+    "town",
+    "county",
+    "neighbourhood",
+    "allotments",
+    "road"
+  ],
+  "time_shift_by_settings": {
+    "-camera_key_shift": {
+      "NIKON_D300": {
+        "days": 0,
+        "hours": 6,
+        "minutes": 0,
+        "seconds": 0
+      },
+      "NIKON D60": {
+        "days": 0,
+        "hours": -8,
+        "minutes": -5,
+        "seconds": 0
+      },
+      "All": {
+        "days": 0,
+        "hours": 8,
+        "minutes": 0,
+        "seconds": 0
+      }
+    }
+  },
+  "utc_cal_by_multi_track": {
+    "min_dist_delta": 5,
+    "max_dist_delta": 50,
+    "distance_step": 3,
+    "min_files_num": 3,
+    "max_files_num": 10,
+    "time_delta": 60,
+    "num_time_delta_spread": 2
+  },
+  "results_check": [
+    "no_address_with_coordinates",
+    "no_utc_datetime",
+    "no_coord_with_utc_time"
+  ],
+  "gpx_track_rebuild":{
+    "merge": false,
+    "distance_delta": 1000,
+    "less_dist_time_delta": 21600,
+    "new_gpx_file_name": "_track.gpx"
+  },
+  "tag_by_hand_info_begin": "@",
+  "mactag_keep_signs": [
+    "*",
+    "_"
+  ],
+  "mactag_order": [
+    "mactag_address",
+    "mactag_no_coord",
+    "mactag_coord_source",
+    "mactag_folder_dt_format",
+    "mactag_path",
+    "mactag_geo_object",
+    "mactag_address_source",
+    "mactag_no_address",
+    "mactag_geo_point_address",
+    "mactag_no_utc_datetime",
+    "mactag_camera_key",
+    "mactag_datetime_offset",
+    "mactag_first_datetime",
+    "mactag_creation_datetime",
+    "mactag_utc_datetime",
+    "mactag_sort_key",
+    "mactag_naming_datetime",
+    "mactag_naming_datetime_warning",
+    "mactag_no_t_zone",
+    "mactag_no_exif_dt"
+  ],
+  "mactag_coord_source": {
+    "active": true,
+    "prefix": "% ",
+    "color": "NONE"
+  },
+  "mactag_no_coord": {
+    "active": true,
+    "prefix": "# no coord",
+    "color": "RED"
+  },
+  "mactag_address_source": {
+    "active": false,
+    "prefix": "# ",
+    "color": "NONE"
+  },
+  "mactag_folder_dt_format": {
+    "active": false,
+    "prefix": "~ ",
+    "color": "YELLOW"
+  },
+  "mactag_path": {
+    "active": true,
+    "prefix": "+ ",
+    "color": "PURPLE"
+  },
+  "mactag_geo_object": {
+    "active": true,
+    "prefix": "= ",
+    "color": "BLUE"
+  },
+  "mactag_address": {
+    "active": true,
+    "prefix": "",
+    "color": "GRAY"
+  },
+  "mactag_no_exif_dt": {
+    "active": true,
+    "prefix": "& ",
+    "color": "RED"
+  },
+  "mactag_camera_key": {
+    "active": true,
+    "prefix": "cam: ",
+    "color": "BLUE"
+  },
+  "mactag_no_address": {
+    "active": false,
+    "prefix": "? no address",
+    "color": "RED"
+  },
+  "mactag_no_utc_datetime": {
+    "active": true,
+    "prefix": "# no_utc_dt",
+    "color": "RED"
+  },
+  "mactag_utc_datetime": {
+    "active": false,
+    "prefix": "utc: ",
+    "color": "NONE"
+  },
+  "mactag_no_t_zone": {
+    "active": true,
+    "prefix": "# no_t_zone",
+    "color": "RED"
+  },
+  "mactag_geo_point_address": {
+    "active": true,
+    "prefix": "geo_point",
+    "color": "ORANGE"
+  },
+  "mactag_first_datetime": {
+    "active": false,
+    "prefix": "f: ",
+    "color": "NONE"
+  },
+  "mactag_creation_datetime": {
+    "active": false,
+    "prefix": "cr: ",
+    "color": "NONE"
+  },
+  "mactag_naming_datetime": {
+    "active": false,
+    "prefix": "n: ",
+    "color": "NONE"
+  },
+  "mactag_datetime_offset": {
+    "active": true,
+    "prefix": "offset:",
+    "color": "NONE"
+  },
+  "mactag_naming_datetime_warning": {
+    "active": true,
+    "prefix": "",
+    "color": "ORANGE"
+  },
+  "mactag_sort_key": {
+    "active": false,
+    "prefix": "sk:",
+    "color": "NONE"
+  },
+  "EXIF_camera_id_tags_names": [
+    "EXIF:Model",
+    "EXIF:LensInfo",
+    "EXIF:Make",
+    "XMP:CameraProfileDigest",
+    "XMP:Model",
+    "XMP:SerialNumber",
+    "MakerNotes:CanonModelID",
+    "MakerNotes:CameraID",
+    "MakerNotes:CameraType",
+    "MakerNotes:SerialNumber",
+    "MakerNotes:InternalSerialNumber",
+    "MakerNotes:CanonModelID "
+  ],
+  "cameras": {
+    "NIKON_D300": {
+      "synthetic_ids": [
+        "NIKON D300"
+      ],
+      "geo_info": "no_geo"
+    },
+    "iPhone5_1": {
+      "synthetic_ids": [
+        "iPhone 5",
+        "4.12"
+      ],
+      "geo_info": ""
+    },
+    "iPhone5_2": {
+      "synthetic_ids": [
+        "iPhone 5",
+        "2.18"
+      ],
+      "geo_info": ""
+    },
+    "iPhone12_1": {
+      "synthetic_ids": [
+        "1.549999952 4.2 1.6 2.4"
+      ],
+      "geo_info": ""
+    },
+    "iPad_1": {
+      "synthetic_ids": [
+        "iPad",
+        "4.28"
+      ],
+      "geo_info": ""
+    },
+    "iPad_2": {
+      "synthetic_ids": [
+        "iPad",
+        "2.18"
+      ],
+      "geo_info": ""
+    },
+    "Canon_1": {
+      "synthetic_ids": [
+        "17825792"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_2": {
+      "synthetic_ids": [
+        "24641536"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_0": {
+      "synthetic_ids": [
+        "Canon PowerShot A95"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_3": {
+      "synthetic_ids": [
+        "24641536"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_4": {
+      "synthetic_ids": [
+        "730321918"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_5": {
+      "synthetic_ids": [
+        "22282240"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_6": {
+      "synthetic_ids": [
+        "23330816"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_7": {
+      "synthetic_ids": [
+        "530407125"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_8": {
+      "synthetic_ids": [
+        "530172530"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_9": {
+      "synthetic_ids": [
+        "630340954"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_10": {
+      "synthetic_ids": [
+        "18939904"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_11": {
+      "synthetic_ids": [
+        "22151168"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_12": {
+      "synthetic_ids": [
+        "19988480"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Canon_13": {
+      "synthetic_ids": [
+        "19267584"
+      ],
+      "geo_info": "no_geo"
+    },
+    "3sec": {
+      "synthetic_ids": [
+        "EXIF:Model=X-2"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Olympus_1": {
+      "synthetic_ids": [
+        "000JDJJ06611"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Olympus_2": {
+      "synthetic_ids": [
+        "0193802016628001"
+      ],
+      "geo_info": "no_geo"
+    },
+    "Olympus_3": {
+      "synthetic_ids": [
+        "0174701018259001"
+      ],
+      "geo_info": "no_geo"
+    },
+    "iPhone_XS_1": {
+      "synthetic_ids": [
+        "iPhone XS",
+        "4.25 6 1.8 2.4"
+      ],
+      "geo_info": ""
+    },
+    "iPhone_6_1": {
+      "synthetic_ids": [
+        "iPhone 6s",
+        "4.150000095 4.150000095 2.2 2.2"
+      ],
+      "geo_info": ""
+    },
+    "iPhone_6_2": {
+      "synthetic_ids": [
+        "iPhone 6s",
+        "4.15 4.15 2.2 2.2"
+      ],
+      "geo_info": ""
+    },
+    "iPhone_6_3": {
+      "synthetic_ids": [
+        "iPhone 6s",
+        "2.65 2.65 2.2 2.2"
+      ],
+      "geo_info": ""
+    },
+    "iPhone__1": {
+      "synthetic_ids": [
+        "4.12 4.12 2.4 2.4"
+      ],
+      "geo_info": ""
+    },
+    "DMC-FZ50": {
+      "synthetic_ids": [
+        "S01060915"
+      ],
+      "geo_info": ""
+    },
+    "NEX-5": {
+      "synthetic_ids": [
+        "18 55 3.5 5.6"
+      ],
+      "geo_info": ""
+    }
+  }
+}

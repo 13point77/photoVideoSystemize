@@ -1,0 +1,10 @@
+PyExifTool 
+beautifulsoup4
+gpxpy 
+pytz 
+geopy 
+Shapely 
+timezonefinder 
+multipledispatch 
+certifi
+lxml

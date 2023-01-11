@@ -1,0 +1,11 @@
+PyExifTool 
+beautifulsoup4
+macos-tags
+gpxpy 
+pytz 
+geopy 
+Shapely 
+timezonefinder 
+multipledispatch 
+certifi
+lxml
